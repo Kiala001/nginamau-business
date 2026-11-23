@@ -64,31 +64,35 @@ a {
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex-shrink: 0
+    flex-shrink: 0;
+    text-decoration: none;
 }
 
 .brand-mark {
-    width: 200px;
-    height: 50px;
-    color: #fff;
-    display: grid;
-    place-items: center;
-    border-radius: 50% 50% 8% 8px;
-    font-size: 20px
+    display: block;
+    width: 220px;
+    height: auto;
+    max-height: 62px;
+    object-fit: contain;
+    object-position: left center;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    flex-shrink: 0;
 }
 
-.brand strong {
-    display: block;
-    font-size: 19px;
-    letter-spacing: -.7px;
-    line-height: 1.1
+@media (max-width: 760px) {
+    .brand-mark {
+        width: 165px;
+        max-height: 48px;
+    }
 }
 
-.brand small {
-    display: block;
-    color: var(--muted);
-    font-size: 9px
+@media (max-width: 380px) {
+    .brand-mark {
+        width: 140px;
+        max-height: 42px;
+    }
 }
 
 .main-nav {
@@ -1570,4 +1574,315 @@ a {
     height: 75px;
   }
 
+}
+
+
+
+/* =========================================
+   SUPORTE PARA IDIOMA ÁRABE - RTL
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
+
+html[dir="rtl"] body {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .site-header {
+  direction: rtl;
+}
+
+html[dir="rtl"] .main-nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .page-hero-content {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-actions {
+  direction: rtl;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .section-heading,
+html[dir="rtl"] .two-col,
+html[dir="rtl"] .contact-grid {
+  direction: rtl;
+}
+
+html[dir="rtl"] .info-card,
+html[dir="rtl"] .team-person,
+html[dir="rtl"] .department-person,
+html[dir="rtl"] .org-support-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .carousel-heading {
+  direction: rtl;
+}
+
+html[dir="rtl"] .carousel-controls {
+  direction: ltr;
+}
+
+html[dir="rtl"] .contact-details a,
+html[dir="rtl"] .contact-details div {
+  direction: rtl;
+}
+
+html[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+html[dir="rtl"] .language-picker {
+  direction: ltr;
+}
+
+/* Manter números, contactos e NIF legíveis */
+html[dir="rtl"] a[href^="tel:"],
+html[dir="rtl"] a[href^="mailto:"],
+html[dir="rtl"] .contact-details {
+  unicode-bidi: plaintext;
+}
+
+/* Evitar problemas com nomes e marcas */
+html[dir="rtl"] .brand,
+html[dir="rtl"] .brand *,
+html[dir="rtl"] .fa-solid,
+html[dir="rtl"] .fa-brands {
+  direction: ltr;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+  html[dir="rtl"] .main-nav {
+    text-align: right;
+  }
+}
+
+
+
+/* =========================================
+   LAYOUT ÁRABE - NGINAMAU
+========================================= */
+
+html[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .site-header,
+html[dir="rtl"] .main-nav,
+html[dir="rtl"] .header-actions {
+  direction: rtl;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .page-hero-content,
+html[dir="rtl"] .section-heading,
+html[dir="rtl"] .intro-layout,
+html[dir="rtl"] .about-main,
+html[dir="rtl"] .contact-grid {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-actions {
+  direction: rtl;
+}
+
+html[dir="rtl"] .info-card,
+html[dir="rtl"] .statement-card,
+html[dir="rtl"] .value-card,
+html[dir="rtl"] .department-person,
+html[dir="rtl"] .team-person,
+html[dir="rtl"] .org-support-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .objective-list > div {
+  direction: rtl;
+}
+
+html[dir="rtl"] .contact-details {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .carousel-heading {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .carousel-controls {
+  direction: ltr;
+}
+
+html[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+html[dir="rtl"] .brand,
+html[dir="rtl"] .fa-solid,
+html[dir="rtl"] .fa-brands {
+  direction: ltr;
+}
+
+html[dir="rtl"] .language-picker {
+  direction: ltr;
+}
+
+html[dir="rtl"] .contact-details a {
+  unicode-bidi: plaintext;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .main-nav {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* =================================
+   CAMPANHAS INSTITUCIONAIS
+================================= */
+
+.campaigns-section {
+  background: #f8f7f5;
+  overflow: hidden;
+}
+
+.campaigns-heading {
+  margin-bottom: 42px;
+}
+
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+.campaign-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .09);
+}
+
+.campaign-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.07;
+  overflow: hidden;
+  background: #eee;
+}
+
+.campaign-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.campaign-card:hover .campaign-image img {
+  transform: scale(1.035);
+}
+
+.campaign-info {
+  padding: 25px;
+}
+
+.campaign-number {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #bd2428;
+  margin-bottom: 12px;
+}
+
+.campaign-info h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin-bottom: 13px;
+  color: #202020;
+}
+
+.campaign-info p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #686868;
+}
+
+.campaigns-cta {
+  margin-top: 42px;
+  padding: 28px;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-left: 4px solid #c4262e;
+}
+
+.campaigns-cta p {
+  font-size: 17px;
+  font-weight: 700;
+  color: #252525;
+}
+
+/* TABLETS */
+
+@media (max-width: 992px) {
+  .campaigns-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* TELEMÓVEIS */
+
+@media (max-width: 600px) {
+  .campaigns-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .campaign-image {
+    aspect-ratio: 1 / 1.05;
+  }
+
+  .campaign-info {
+    padding: 22px;
+  }
+
+  .campaign-info h3 {
+    font-size: 19px;
+  }
+
+  .campaigns-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .campaigns-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
