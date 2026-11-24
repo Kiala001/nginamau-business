@@ -1,6 +1,5 @@
 
 const header = document.getElementById("site-header");
-const footer = document.getElementById("site-footer");
 
 const currentPage = location.pathname.split("/").pop() || "index.html";
 
@@ -69,37 +68,98 @@ if (header) {
   `;
 }
 
+
+const footer = document.getElementById("site-footer");
+
 if (footer) {
   footer.innerHTML = `
     <footer class="site-footer">
+      <div class="container footer-main">
 
-      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/logo.png" alt="NGINAMAU Business">
+          </a>
 
-        <a class="brand footer-brand" href="index.html">
-          <img
-            class="brand-mark"
-            src="assets/logo.png"
-            alt="NGINAMAU"
-          >
-        </a>
+          <p>
+            Distribuição de combustível, onde e quando precisar.
+            Soluções de fornecimento de gasóleo e gasolina
+            para empresas e instituições.
+          </p>
+        </div>
 
-        <a class="back-top" href="#inicio" aria-label="Voltar ao início">
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
+        <div class="footer-column">
+          <h3>Contactos</h3>
+
+          <a href="tel:+244927358731">
+            <i class="fa-solid fa-phone"></i>
+            +244 927 358 731
+          </a>
+
+          <a href="mailto:nginamaugeral@outlook.com">
+            <i class="fa-solid fa-envelope"></i>
+            nginamaugeral@outlook.com
+          </a>
+
+          <a href="https://wa.me/244927358731"
+             target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Localização</h3>
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            Bairro Rangel, Município do Rangel,
+            Luanda, Angola.
+          </p>
+
+          <p>
+            <i class="fa-solid fa-file-lines"></i>
+            NIF: 5002972042
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Redes sociais</h3>
+
+          <p>Acompanhe a NGINAMAU nas redes sociais.</p>
+
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/1KJ75AmPST/"
+               target="_blank"
+               rel="noopener"
+               aria-label="Facebook da NGINAMAU">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://wa.me/244927358731"
+               target="_blank"
+               rel="noopener"
+               aria-label="WhatsApp da NGINAMAU">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
 
       </div>
 
-      <div class="container footer-bottom">
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <p>
+            &copy; ${new Date().getFullYear()}
+            M.V. NGINAMAU BUSINESS - COMÉRCIO & SERVIÇOS, LDA.
+            Todos os direitos reservados.
+          </p>
 
-        <span>
-          © ${new Date().getFullYear()}
-          M.V. NGINAMAU BUSINESS - COMÉRCIO & SERVIÇOS, LDA.
-        </span>
-
-        <span>Todos os direitos reservados.</span>
-
+          <a href="#">Voltar ao topo
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
       </div>
-
     </footer>
   `;
 }
